@@ -1,10 +1,10 @@
-package com.springboot.lms;
+package com.ash.quickstart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LmsApplicationTests {
+class QuickstartApplicationTests {
 
 	@Test
 	void contextLoads() {
