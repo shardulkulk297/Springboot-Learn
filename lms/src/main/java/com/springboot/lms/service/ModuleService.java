@@ -7,6 +7,8 @@ import com.springboot.lms.repository.CourseRepository;
 import com.springboot.lms.repository.ModuleRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ModuleService {
 
@@ -23,6 +25,10 @@ public class ModuleService {
         Course course = courseRepository.findById(courseId).orElseThrow(()->new ResourceNotFoundException("Course Not Found"));
         module.setCourse(course);
         moduleRepository.save(module);
+    }
+
+    public List<LModule> getModulesByCourse(int courseId){
+        return moduleRepository.getModulesByCourse(courseId);
     }
 
 }
