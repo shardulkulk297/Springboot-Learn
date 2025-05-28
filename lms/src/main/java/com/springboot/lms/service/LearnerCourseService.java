@@ -10,6 +10,7 @@ import com.springboot.lms.repository.LearnerRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class LearnerCourseService {
@@ -44,6 +45,24 @@ public class LearnerCourseService {
 
         return learnerCourseRepository.save(learnerCourse);
     }
+
+    public List<Learner> getLearnerEnrolledInGivenCourse(int courseId){
+        return learnerCourseRepository.getLearnerEnrolledInCourse(courseId);
+    }
+
+    public List<Course> getCoursesOfGivenLearner(int learnerId){
+
+         /*
+        AIM: Fetch all the courses of given learner
+        Params: LearnerId taken as pathVariable
+        Solution: Write a JPQL for fetching the courses of learner
+         */
+
+        return learnerCourseRepository.getCoursesOfGivenLearner(learnerId);
+    }
+
+
+
 
 
 

@@ -54,6 +54,13 @@ public class ReviewService {
     }
 
     public List<Review> getReviewsByRatings(String rating){
+
+        /*
+        AIM: To fetch reviews that are greater than given ratings
+        Params: RequestParam rating
+        Solution: Use JPQL to fetch reviews that are greater than given rating using @Query annotation
+         */
+
       return reviewRepository.getReviewsByRatings(rating);
     }
 
